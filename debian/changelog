@@ -1,0 +1,33 @@
+node-loose-envify (1.4.0+dfsg1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Paolo Greppi ]
+  * Update Vcs fields for migration to https://salsa.debian.org/
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Bump debhelper compatibility level to 12
+  * Use pkg-js-tools auto install
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * New upstream version 1.4.0+dfsg1
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 08 Mar 2020 12:01:04 +0100
+
+node-loose-envify (1.3.1+dfsg1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 23 Jan 2018 16:44:42 +0530
+
+node-loose-envify (1.3.0+dfsg1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #846206)
+  * Exclude non-dfsg patented react source code
+  * Remove extraneous files.
+  * Provide manpage.
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Thu, 22 Dec 2016 17:48:29 +0000

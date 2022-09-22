@@ -1,0 +1,28 @@
+Source: node-loose-envify
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Build-Depends: debhelper-compat (= 12)
+ , node-marked-man
+ , node-js-tokens <!nocheck>
+ , pkg-js-tools (>= 0.9.20~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-loose-envify
+Vcs-Git: https://salsa.debian.org/js-team/node-loose-envify.git
+Homepage: https://github.com/zertosh/loose-envify
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-loose-envify
+Architecture: all
+Depends: ${misc:Depends}
+ , node-js-tokens
+ , nodejs
+Description: Replace Node.js environment variables with plain strings
+ Performs a Javascript source-to-source transformation (transpiling),
+ that efficiently replaces process.env environment variables with plain
+ strings. This makes the environment variable checks faster and easier to
+ optimize out.
+ .
+ Node.js is an event-based server-side JavaScript engine.

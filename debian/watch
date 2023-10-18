@@ -1,6 +1,6 @@
-version=3
+version=4
 opts=\
 repacksuffix=+dfsg1,\
-dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-loose-envify-$1.tar.gz/ \
- https://github.com/zertosh/loose-envify/tags .*/archive/v?([\d\.]+).tar.gz
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-loose-envify-$1/ \
+ https://github.com/zertosh/loose-envify/tags .*/archive/.*/v?([\d\.]+).tar.gz

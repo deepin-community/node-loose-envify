@@ -1,0 +1,25 @@
+Description: fix for js-tokens 6
+Author: Yadd <yadd@debian.org>
+Bug-Debian: https://bugs.debian.org/1012171
+Forwarded: no
+Last-Update: 2022-05-31
+
+--- a/replace.js
++++ b/replace.js
+@@ -1,6 +1,6 @@
+ 'use strict';
+ 
+-var jsTokens = require('js-tokens').default;
++var jsTokens = require('js-tokens');
+ 
+ var processEnvRe = /\bprocess\.env\.[_$a-zA-Z][$\w]+\b/;
+ var spaceOrCommentRe = /^(?:\s|\/[/*])/;
+@@ -16,7 +16,7 @@
+   });
+ 
+   jsTokens.lastIndex = 0
+-  var parts = src.match(jsTokens);
++  var parts = Array.from(jsTokens(src), (token) => token.value);
+ 
+   for (var i = 0; i < parts.length; i++) {
+     if (parts[i    ] === 'process' &&

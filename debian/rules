@@ -5,7 +5,7 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with nodejs
+	dh $@
 
 override_dh_auto_build:
 	marked-man --version v1.3.0 --section 1 --manual 'loose-envify man page' debian/loose-envify.md > debian/loose-envify.1
